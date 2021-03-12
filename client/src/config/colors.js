@@ -1,0 +1,15 @@
+export default {
+  primary1: "#FA942B",
+  primary2: "#0F7C5F",
+  primary3: "#EA6326",
+  secondary1: "#47BE93",
+  secondary2: "#979F48",
+  secondary3: "#839D46",
+  light1: "#43B987",
+  light2: "#B7D972",
+  light3: "#97F9E3",
+  light4: "#EFFDFD",
+  dark: "#002A24",
+  white: "#fff",
+  black: "#000",
+};

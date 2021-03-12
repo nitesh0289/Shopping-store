@@ -1,0 +1,54 @@
+/* antDesign CSS */
+
+#components-layout-demo-side .logo {
+  height: 32px;
+  margin: 16px;
+  background: rgb(255, 255, 255, 0.2);
+}
+.site-layout .site-layout-background {
+  background: #fff;
+}
+
+/*My css*/
+
+/* AntDesign CSS edit */
+.ant-carousel .slick-dots li button {
+  background: rgb(127, 236, 189);
+  opacity: 0.4;
+}
+
+.ant-carousel .slick-dots li.slick-active button {
+  opacity: 1;
+  background: rgb(4, 37, 31);
+}
+
+/* ----------------- */
+
+.header {
+  padding: 0;
+  margin-top: auto;
+  top: 4.5em;
+  position: sticky;
+}
+
+.headerTitle {
+  color: #fff;
+  font-size: 2em;
+  text-align: center;
+  transform: translateY(50%);
+}
+
+.sidebarTitle {
+  color: #fff;
+  font-size: 1.2em;
+  text-align: center;
+  transform: translateY(50%);
+}
+
+.containerWidth {
+  margin-left: 80px;
+}
+
+.onCollapseContainerWidth {
+  margin-left: 200px;
+}

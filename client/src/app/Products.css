@@ -1,0 +1,10 @@
+.cardContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.posterImage {
+  height: 400px;
+  width: 100%;
+}

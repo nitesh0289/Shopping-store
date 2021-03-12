@@ -1,0 +1,64 @@
+.navbar-default {
+  transition: 200ms ease;
+  background: transparent;
+}
+.navbar-default.scrolled {
+  background: rgb(190, 229, 212);
+}
+
+.logo {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-left: 15%;
+}
+
+.branding {
+  display: inline;
+  width: auto;
+  padding-left: 10px;
+  font-size: 1.2em;
+  font-weight: 600;
+  font-family: fantasy;
+}
+
+.navbar-toggler:focus {
+  outline: none;
+}
+
+.navbar-toggler {
+  border: none;
+}
+
+.nav-item {
+  justify-content: center;
+}
+
+.spacer {
+  flex: 30;
+}
+
+.nav-li {
+  font-size: 1.1em;
+  font-family: fantasy;
+  padding: 0 0.8em;
+  margin: 0 0.8em;
+  color: #000000 !important;
+}
+
+.active {
+  background-image: linear-gradient(to right, #ea6326, #fa942b);
+  box-shadow: 0 5px 5px rgb(112, 111, 111);
+  border-radius: 10px;
+  color: #ffffff;
+  text-decoration: none;
+}
+.nav-li:hover {
+  font-size: 1.15em;
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 2px 2px rgb(112, 111, 111);
+  text-decoration: none;
+  border-radius: 10px;
+  color: #000000;
+}
