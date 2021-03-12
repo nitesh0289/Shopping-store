@@ -23,6 +23,46 @@
   font-family: fantasy;
 }
 
+.searchBox {
+  width: 38%;
+  margin-left: 2em;
+}
+
+.searchInput {
+  width: 90%;
+  height: 1.8em;
+  font-size: 1.3em;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana;
+  padding-left: 0.8rem;
+  letter-spacing: 1.5px;
+  background-color: hsla(154, 43%, 82%, 0.748);
+}
+
+.searchInput:focus {
+  outline: none;
+}
+
+.searchIconBox {
+  display: inline-block;
+  width: 2.5em;
+  height: 1.8em;
+  font-size: 1.3em;
+  position: absolute;
+  text-align: center;
+  border: 2px solid black;
+  border-left: none;
+  background-color: #15be79;
+  cursor: pointer;
+}
+
+.searchIcon:hover {
+  transform: scale(1.02);
+}
+
+.searchIcon {
+  width: 1.8em;
+}
+
 .navbar-toggler:focus {
   outline: none;
 }
@@ -43,7 +83,7 @@
   font-size: 1.1em;
   font-family: fantasy;
   padding: 0 0.8em;
-  margin: 0 0.8em;
+  margin: 0 0.5rem;
   color: #000000 !important;
 }
 

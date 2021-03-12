@@ -4,6 +4,8 @@ import { NavLink } from "react-router-dom";
 import "./Navbar.css";
 import colors from "../../config/colors";
 import shoppingCart from "../../assets/icons/shopping-cart.png";
+import cart from "../../assets/icons/cart.png";
+import search from "../../assets/icons/search.png";
 
 function Navbar() {
   const $ = window.$;
@@ -15,10 +17,20 @@ function Navbar() {
     <div>
       <nav className="navbar navbar-expand-lg navbar-default fixed-top">
         <div className="container-fluid">
-          <div className="navbar-brand">
-            <img src={shoppingCart} className="logo" alt="" />
-            <div className="branding" style={{ color: colors.black }}>
-              Shopping Website
+          <NavLink to="/home" activeClassName="">
+            <div className="navbar-brand">
+              <img src={shoppingCart} className="logo" alt="" />
+              <div className="branding" style={{ color: colors.black }}>
+                Shopping Website
+              </div>
+            </div>
+          </NavLink>
+          <div className="spacer" />
+          <div className="searchBox">
+            <input placeholder="Search" className="searchInput" />
+
+            <div className="searchIconBox">
+              <img src={search} className="searchIcon" />
             </div>
           </div>
           <div className="spacer" />
@@ -60,15 +72,6 @@ function Navbar() {
 
               <NavLink
                 exact
-                to="/info"
-                className="nav-item nav-li"
-                activeClassName="active"
-              >
-                <li className="nav-link">Info</li>
-              </NavLink>
-
-              <NavLink
-                exact
                 to="/aboutUs"
                 className="nav-item nav-li"
                 activeClassName="active"
@@ -82,7 +85,15 @@ function Navbar() {
                 className="nav-item nav-li"
                 activeClassName="active"
               >
-                <li className="nav-link">Account</li>
+                <li className="nav-link">Sign Up</li>
+              </NavLink>
+
+              <NavLink to="/" activeClassName="">
+                <img
+                  className="logo"
+                  src={cart}
+                  style={{ boxShadow: "1px 4px 3px grey" }}
+                />
               </NavLink>
             </ul>
           </div>

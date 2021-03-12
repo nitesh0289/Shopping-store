@@ -97,7 +97,6 @@ function Products() {
             />
           </div>
           <div>
-            {" "}
             <OccasionCard
               occassion="T-Shirts"
               occassionImg="https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/1700889/2017/3/13/11489381574012-HRX-by-Hrithik-Roshan-Men-Black-Printed-T-shirt-5221489381573786-1.jpg"
