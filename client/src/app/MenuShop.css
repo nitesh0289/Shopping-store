@@ -1,0 +1,53 @@
+.ant-carousel .slick-dots li button {
+  background: rgb(101, 114, 143);
+  opacity: 0.4;
+}
+
+.ant-carousel .slick-dots li.slick-active button {
+  opacity: 1;
+  background: rgb(4, 37, 31);
+}
+
+.menu-item {
+  color: #000;
+  font-size: 1.1rem;
+  font-weight: 500;
+  font-family: cursive;
+  text-transform: capitalize;
+  height: 3rem !important;
+}
+
+.menu-item:hover {
+  color: #000;
+  font-size: 1.15rem;
+}
+
+.sider-width {
+  margin-left: 200px;
+}
+
+.sider-container {
+  min-height: 100%;
+  position: fixed;
+  left: 0;
+  background-color: #d9e4dd;
+  border-right: 2px dashed rgb(90, 90, 90);
+}
+
+.sidebarTitle {
+  color: #070d59;
+  font-size: 1.4rem;
+  font-weight: 600;
+  text-transform: capitalize;
+  /* text-decoration: underline; */
+  border-bottom: 2px solid #d7385e;
+  margin: 0 0.7rem;
+  text-align: center;
+  transform: translateY(50%);
+}
+
+.menu-container {
+  background-color: #d9e4dd;
+  margin-top: 2.5rem;
+  /* border-right: 1px dashed gray; */
+}

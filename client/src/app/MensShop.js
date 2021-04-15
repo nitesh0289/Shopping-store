@@ -2,14 +2,13 @@ import React, { useState } from "react";
 import { Layout, Menu } from "antd";
 import "antd/dist/antd.css";
 
-import "./components/AntDesign.css";
+import "./MenuShop.css";
 import JeansItem from "./components/JeansItem";
 import TShirts from "./components/TShirts";
 
-const { Content, Footer, Sider } = Layout;
+const { Content, Sider } = Layout;
 
 function MensShop() {
-  const [collapsed, setCollapsed] = useState(false);
   const [selectedMenu, setSelectedMenu] = useState("1");
 
   const componentsSwtich = (key) => {
@@ -34,30 +33,18 @@ function MensShop() {
   return (
     <div
       style={{
-        display: "flex",
-        width: "100vw",
+        minWidth: "1200px",
         height: "100vh",
-        marginTop: "4.5em",
       }}
     >
-      <Layout
-        className={collapsed ? "containerWidth" : "onCollapseContainerWidth"}
-      >
-        <Sider
-          style={{
-            overflow: "auto",
-            height: "100vh",
-            position: "fixed",
-            left: 0,
-          }}
-        >
+      <Layout className="sider-width">
+        <Sider className="sider-container">
           <div className="sidebarTitle">Mens Shopping</div>
           <Menu
             selectedKeys={selectedMenu}
-            theme="dark"
+            className="menu-container"
             mode="inline"
             defaultSelectedKeys={["1"]}
-            className="mt-5"
             onClick={(e) => setSelectedMenu(e.key)}
           >
             <Menu.Item
@@ -65,7 +52,7 @@ function MensShop() {
               icon={
                 <img src="https://img.icons8.com/emoji/32/000000/jeans-emoji.png" />
               }
-              className="text-warning"
+              className="menu-item"
             >
               Jeans
             </Menu.Item>
@@ -74,7 +61,7 @@ function MensShop() {
               icon={
                 <img src="https://img.icons8.com/bubbles/32/000000/t-shirt.png" />
               }
-              className="text-warning"
+              className="menu-item"
             >
               T-Shirts
             </Menu.Item>
@@ -83,7 +70,7 @@ function MensShop() {
               icon={
                 <img src="https://img.icons8.com/flat-round/32/000000/short-sleeve-shirt.png" />
               }
-              className="text-warning"
+              className="menu-item"
             >
               Shirts
             </Menu.Item>
@@ -92,7 +79,7 @@ function MensShop() {
               icon={
                 <img src="https://img.icons8.com/plasticine/32/000000/trousers.png" />
               }
-              className="text-warning"
+              className="menu-item"
             >
               Trousers
             </Menu.Item>
@@ -101,7 +88,7 @@ function MensShop() {
               icon={
                 <img src="https://img.icons8.com/flat-round/32/000000/sneakers.png" />
               }
-              className="text-warning"
+              className="menu-item"
             >
               Shoes
             </Menu.Item>
@@ -110,20 +97,14 @@ function MensShop() {
               icon={
                 <img src="https://img.icons8.com/bubbles/32/000000/flip-flops.png" />
               }
-              className="text-warning"
+              className="menu-item"
             >
               Slippers
             </Menu.Item>
           </Menu>
         </Sider>
-        <Layout
-          className="site-layout pt-3"
-          style={{ backgroundColor: "#e3e4e6" }}
-        >
+        <Layout>
           <Content>{componentsSwtich(selectedMenu)}</Content>
-          <Footer style={{ textAlign: "center" }}>
-            a_phenomenal1 ©2021 Created by Nitesh Kumar
-          </Footer>
         </Layout>
       </Layout>
     </div>

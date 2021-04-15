@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import { Card, Carousel } from "antd";
 import CrouselComp from "./CrouselComp";
-import cart from "../../assets/icons/cart.png";
+import "./Cards.css";
+// import cart from "../../assets/icons/cart.png";
 
 export function IntroCard(props) {
   return (
@@ -18,7 +19,7 @@ export function IntroCard(props) {
 export function CategoryCard(props) {
   return (
     <div
-      className="cardBox2 col-lg-3 col-sm-5 m-2"
+      className="cardBox2 m-2"
       style={{
         backgroundImage:
           "linear-gradient(rgba(0, 0, 0, 0.426), rgba(0, 0, 0, 0.426)),url(" +
@@ -55,9 +56,9 @@ export function ItemCard(props) {
   const sizes = props.sizes;
 
   return (
-    <div className="col-lg-3 col-sm-6 mb-5">
+    <div className="mb-5">
       <Card
-        className="itemCard cardEx ml-2 mr-2"
+        className="itemCard cardEx"
         cover={
           <>
             <div
@@ -107,9 +108,9 @@ export function ItemCard(props) {
             <div style={{ flex: 1 }} />
             <div>
               <img
-                src={cart}
-                className="logo1 cartIcon"
-                style={{ borderRadius: "50%" }}
+                src="https://img.icons8.com/color/40/000000/add-shopping-cart--v2.png"
+                className="cartIcon"
+                style={{ borderRadius: "50%", cursor: "pointer" }}
                 onClick={() =>
                   props.item.callback(
                     props.item.id,

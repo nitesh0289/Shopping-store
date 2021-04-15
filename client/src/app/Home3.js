@@ -36,7 +36,7 @@ function Home3() {
 
   return (
     <>
-      <div className="content2 mt-5 col-lg-12" id="products">
+      <div className="content2 col-lg-12" id="products">
         <div className="intro2">
           <h1 className="title mt-5" style={{ textAlign: "center" }}>
             Shop By Catagory

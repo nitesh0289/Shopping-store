@@ -9,7 +9,7 @@ export default {
   light2: "#B7D972",
   light3: "#97F9E3",
   light4: "#EFFDFD",
-  dark: "#002A24",
+  dark: "#3f3f3f",
   white: "#fff",
   black: "#000",
 };

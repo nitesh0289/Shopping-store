@@ -1,11 +1,11 @@
-import React from "react";
-import { NavLink } from "react-router-dom";
+import React, { useEffect } from "react";
+import { Link } from "react-router-dom";
 
 import "./Navbar.css";
-import colors from "../../config/colors";
-import shoppingCart from "../../assets/icons/shopping-cart.png";
-import cart from "../../assets/icons/cart.png";
+import cart from "../../assets/icons/shopping-bag.png";
 import search from "../../assets/icons/search.png";
+import logo from "../../assets/icons/mypost1.png";
+import { useStateValue } from "../StateProvider";
 
 function Navbar() {
   const $ = window.$;
@@ -13,92 +13,64 @@ function Navbar() {
     $("nav").toggleClass("scrolled", $(this).scrollTop() > 20);
   });
 
+  const [{ user }, dispatch] = useStateValue();
+  useEffect(() => {
+    console.log("user: ", user);
+  }, [user]);
+
+  const handleLogout = () => {
+    dispatch({
+      type: "SET_USER",
+      user: [],
+    });
+    window.location.reload(false);
+  };
+
   return (
-    <div>
-      <nav className="navbar navbar-expand-lg navbar-default fixed-top">
-        <div className="container-fluid">
-          <NavLink to="/home" activeClassName="">
-            <div className="navbar-brand">
-              <img src={shoppingCart} className="logo" alt="" />
-              <div className="branding" style={{ color: colors.black }}>
-                Shopping Website
-              </div>
-            </div>
-          </NavLink>
-          <div className="spacer" />
-          <div className="searchBox">
-            <input placeholder="Search" className="searchInput" />
-
-            <div className="searchIconBox">
-              <img src={search} className="searchIcon" />
-            </div>
-          </div>
-          <div className="spacer" />
-          <button
-            className="navbar-toggler"
-            type="button"
-            data-toggle="collapse"
-            data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span>
-              <i className="fa fa-bars" style={{ color: colors.dark }} />
+    <div className="nav-container">
+      <div className="logo-container">
+        <Link to="/">
+          <img src={logo} alt="logo" width="100%" />
+        </Link>
+      </div>
+      <div className="search-box">
+        <span className="input-box">
+          <input placeholder="search item" className="input-field" />
+        </span>
+        <span className="search-icon-container">
+          <img src={search} width="30px" />
+        </span>
+      </div>
+      <div className="nav-list-container">
+        <div>
+          <div className="first-line">Returns</div>
+          <div className="second-line">& Orders</div>
+        </div>
+        <div>
+          <div className="first-line">
+            {user.length !== 0 ? "Hi " : "Hello "}
+            <span style={{ fontStyle: "italic", fontWeight: 600 }}>
+              {user.length !== 0 ? user[0].name : "Guest"}
             </span>
-          </button>
-          <div className="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul
-              className="navbar-nav mr-auto col-md-12"
-              style={{ marginRight: "10%" }}
-            >
-              <NavLink
-                exact
-                to="/home"
-                activeClassName="active"
-                className="nav-item nav-li"
-              >
-                <li className="nav-link">Home</li>
-              </NavLink>
+          </div>
 
-              <NavLink
-                exact
-                to="/"
-                className="nav-item nav-li"
-                activeClassName="active"
-              >
-                <li className="nav-link">Products</li>
-              </NavLink>
-
-              <NavLink
-                exact
-                to="/aboutUs"
-                className="nav-item nav-li"
-                activeClassName="active"
-              >
-                <li className="nav-link">About Us</li>
-              </NavLink>
-
-              <NavLink
-                exact
-                to="/account"
-                className="nav-item nav-li"
-                activeClassName="active"
-              >
-                <li className="nav-link">Sign Up</li>
-              </NavLink>
-
-              <NavLink to="/" activeClassName="">
-                <img
-                  className="logo"
-                  src={cart}
-                  style={{ boxShadow: "1px 4px 3px grey" }}
-                />
-              </NavLink>
-            </ul>
+          <div className="second-line">
+            {user.length !== 0 ? (
+              <span onClick={handleLogout} style={{ cursor: "pointer" }}>
+                Logout
+              </span>
+            ) : (
+              <a href="/login" style={{ color: "#fff" }}>
+                Login
+              </a>
+            )}
           </div>
         </div>
-      </nav>
+        <div>
+          <img src={cart} width="35px" />
+          <sub className="cart-value">0</sub>
+        </div>
+      </div>
     </div>
   );
 }

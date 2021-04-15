@@ -1,5 +1,5 @@
 import React from "react";
-import { Breadcrumb, Row } from "antd";
+import { Breadcrumb } from "antd";
 
 import { ItemCard } from "./Cards";
 import getJeansXY from "../Products/Jeans";
@@ -32,19 +32,20 @@ function JeansItem(props) {
 
   return (
     <div
-      className="site-layout-background col-lg-12 p-4"
       style={{
-        backgroundColor: "#e3e4e6",
+        backgroundColor: "#f5f4f4",
+        height: "100%",
+        marginLeft: "1.5rem",
       }}
     >
-      <div className="mb-3" style={{ fontWeight: "600" }}>
+      <div style={{ margin: "1.5rem 0", fontWeight: 600 }}>
         <Breadcrumb separator=">">
-          <Breadcrumb.Item href="/products">Products</Breadcrumb.Item>
+          <Breadcrumb.Item href="/">Products</Breadcrumb.Item>
           <Breadcrumb.Item>{props.type} Shopping</Breadcrumb.Item>
           <Breadcrumb.Item>Jeans Category</Breadcrumb.Item>
         </Breadcrumb>
       </div>
-      <Row gutter={10}>
+      <div className="itemContainer">
         {products.map((val) => {
           return (
             <ItemCard
@@ -59,7 +60,7 @@ function JeansItem(props) {
             />
           );
         })}
-      </Row>
+      </div>
     </div>
   );
 }

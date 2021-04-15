@@ -1,40 +1,22 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { OccasionCard } from "./components/Cards";
 import "./Products.css";
-import { Carousel } from "antd";
-import Footer1 from "./components/Footer1";
-import poster1 from "../assets/poster1.gif";
-import poster2 from "../assets/poster2.jpg";
-import poster3 from "../assets/poster3.jpg";
 import mensCategory from "../assets/mensCategory.jpg";
 import girlCategory from "../assets/girlCategory.jpg";
 import womensCategory from "../assets/womensCategory.jpg";
 import kids from "../assets/kids.webp";
 import pets from "../assets/pets.webp";
-import { Link } from "react-router-dom";
 
 function Products() {
   return (
-    <div>
-      <div className="fluid-container mx-5" style={{ margin: "4.5em 0 0 0" }}>
-        <Carousel autoplay>
-          <div>
-            <img src={poster2} className="posterImage" />
-          </div>
-          <div>
-            <img src={poster1} className="posterImage" />
-          </div>
-          <div>
-            <img src={poster3} className="posterImage" />
-          </div>
-        </Carousel>
-      </div>
-      <div className="mx-3 my-5">
-        <h1 className="title mt-2" style={{ textAlign: "center" }}>
+    <div style={{ minWidth: "1200px" }}>
+      <div style={{ margin: "1.5rem 0" }}>
+        <h1 className="title" style={{ textAlign: "center" }}>
           Shop By Category
         </h1>
         <div className="underline" />
-        <div className="mt-5 mx-5 cardContainer">
+        <div className="cardContainer">
           <Link to="/mensShop">
             <OccasionCard occassion="Male Outfit" occassionImg={mensCategory} />
           </Link>
@@ -52,12 +34,12 @@ function Products() {
           <OccasionCard occassion="Pets Clothing" occassionImg={pets} />
         </div>
       </div>
-      <div className="mx-3 my-5">
-        <h1 className="title mt-2" style={{ textAlign: "center" }}>
+      <div>
+        <h1 className="title" style={{ textAlign: "center" }}>
           Shop By Occassion
         </h1>
         <div className="underline" />
-        <div className="mt-5 mx-5 cardContainer">
+        <div className="cardContainer">
           <OccasionCard
             occassion="Festival Wear"
             occassionImg="http://www.babycouture.in/blog/wp-content/uploads/2014/10/family-and-diwali.jpg"
@@ -68,7 +50,7 @@ function Products() {
           />
           <OccasionCard
             occassion="Party Wear"
-            occassionImg="https://i.pinimg.com/564x/45/5e/05/455e05d4cb76adaa2ac562ebff8e35b9.jpg"
+            occassionImg="https://i.pinimg.com/736x/c4/9e/d6/c49ed61ab8979645dcbc9930ce20e205--coctail-attire-for-women-mens-cocktail-attire.jpg"
           />
           <OccasionCard
             occassion="Office Wear"
@@ -80,12 +62,12 @@ function Products() {
           />
         </div>
       </div>
-      <div className="mx-3 my-5">
-        <h1 className="title mt-2" style={{ textAlign: "center" }}>
+      <div>
+        <h1 className="title" style={{ textAlign: "center" }}>
           Shop By Outfits
         </h1>
         <div className="underline" />
-        <div className="mt-5 mx-5 cardContainer">
+        <div className="cardContainer">
           <div>
             <OccasionCard
               occassion="Jeans"
@@ -138,12 +120,12 @@ function Products() {
           </div>
         </div>
       </div>
-      <div className="mx-3 my-5">
-        <h1 className="title mt-2" style={{ textAlign: "center" }}>
+      <div>
+        <h1 className="title" style={{ textAlign: "center" }}>
           Fassion Accessories
         </h1>
         <div className="underline" />
-        <div className="mt-5 mx-5 cardContainer">
+        <div className="cardContainer">
           <OccasionCard
             occassion="Watches"
             occassionImg="http://cdn.shopify.com/s/files/1/0304/3821/products/2018-Curren-Mens-Watches-Top-Brand-Luxury-Brown-Leather-Strap-Quartz-Watch-Men-Military-Sport-Waterproof_1200x1200.jpg?v=1530781405"
@@ -166,7 +148,6 @@ function Products() {
           />
         </div>
       </div>
-      <Footer1 />
     </div>
   );
 }

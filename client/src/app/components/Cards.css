@@ -1,0 +1,232 @@
+.cardsContainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 0 1em;
+}
+
+.cardBox {
+  display: flex;
+  width: 22%;
+  background-color: #fff;
+  justify-content: center;
+  flex-direction: column;
+  margin: 0 auto;
+  border-top-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+.cardBox2 {
+  display: flex;
+  flex-direction: column;
+  height: 250px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-top-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+  background-color: #fff;
+}
+
+.cardBox:hover {
+  transform: scale(1.02);
+}
+
+.cardBox2:hover {
+  transition: 0.2s;
+  box-shadow: 5px 5px 5px rgb(153, 153, 153);
+  transform: scale(1.02);
+  border-radius: 20px;
+}
+
+.iconBox {
+  height: 40%;
+  text-align: center;
+}
+
+.introIcon {
+  width: 60px;
+  height: 55px;
+  margin: 0.8rem;
+  box-shadow: 2px 4px 4px rgb(126, 124, 124);
+  border-radius: 50%;
+}
+
+.cardTitle {
+  font-size: 1.3em;
+  margin: 0.7em 0 0.5em 0;
+  color: #313030;
+  font-weight: 600;
+  text-align: center;
+}
+
+.cardTitle2 {
+  font-size: 2em;
+  color: #fff;
+  font-weight: 600;
+  padding-top: 1em;
+  text-align: center;
+}
+
+.cardIntro {
+  font-size: 1em;
+  text-align: center;
+}
+
+.cardIntro2 {
+  font-size: 1.2em;
+  text-align: center;
+  color: rgb(223, 219, 219);
+}
+
+.footer {
+  display: flex;
+  background-color: rgb(190, 229, 212);
+  justify-content: center;
+  flex-direction: column;
+}
+
+.iconHolder {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.itemCard {
+  border-radius: 20px !important;
+  overflow: hidden;
+  z-index: 10;
+  width: 250px;
+}
+
+.itemContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.hide {
+  visibility: hidden;
+}
+
+.cardEx:hover {
+  box-shadow: 3px 5px 5px rgb(150, 149, 149);
+  border-radius: 20px;
+}
+
+.itemTitle {
+  font-size: 1.2em;
+  font-weight: 600;
+  text-align: left;
+  color: #01353b;
+}
+
+.itemCard:hover .hide {
+  visibility: visible;
+}
+
+.itemImg {
+  width: 100%;
+  height: 300px;
+}
+
+.itemPrice {
+  font-size: 1.2em;
+  color: #000;
+  text-align: left;
+}
+
+.logo1 {
+  background-color: rgba(213, 211, 211, 0.494);
+  width: 35px;
+  margin: 0.5rem;
+  padding: 6px;
+  cursor: pointer;
+  float: right;
+}
+
+.logo1:hover .cartIcon:hover {
+  transform: scale(1.05);
+}
+
+.cartIcon {
+  background-color: rgba(213, 211, 211, 0.494);
+  width: 40px;
+  margin: 0;
+  padding: 6px;
+  cursor: pointer;
+}
+
+.logoCont {
+  display: flex;
+  height: 100%;
+  padding: 0.2em;
+  align-items: flex-start;
+}
+
+/* .crousalContent {
+    height: 300px;
+    background: url(https://hips.hearstapps.com/vader-prod.s3.amazonaws.com/1584477345-best-jeans-9-1584477328.jpg?crop=1xw:1xh;center,top&resize=480%3A%2A);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  } */
+
+.sizes {
+  padding: 2px;
+  border-radius: 50%;
+  margin-left: 2px;
+  cursor: pointer;
+}
+
+.sizes:hover {
+  background-color: rgb(159, 240, 243);
+}
+.sizes:active {
+  background-color: rgb(236, 83, 27);
+}
+
+/* ------------------------------------- */
+
+.cardBox3 {
+  display: flex;
+  width: 200px;
+  height: 250px;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: rgb(255, 255, 255);
+}
+
+.cardBox3:hover {
+  box-shadow: 5px 5px 10px rgb(131, 131, 131);
+  transform: scale(1.02);
+  border-radius: 20px;
+}
+
+.cardImgBox {
+  border-radius: 50%;
+  overflow: hidden;
+  border: 3px solid #f1aefaf3;
+}
+
+.cardImg {
+  width: 150px;
+  height: 150px;
+  transform: scale(1.1);
+}
+
+.cardImg:hover {
+  transform: scale(1.15);
+  transition: 0.3s;
+}
+
+.occassionTitle {
+  font-size: 1.5rem;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana;
+}

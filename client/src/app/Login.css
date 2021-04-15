@@ -1,0 +1,60 @@
+.container-box {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-color: #f3f3f3;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo {
+  width: 350px;
+}
+
+.login-box {
+  display: flex;
+  flex-direction: column;
+  width: 350px;
+  min-height: 400px;
+  border-radius: 15px;
+  padding: 15px 0;
+  background-color: #ffffff;
+}
+
+.head-title {
+  text-align: center;
+  font-size: 30px;
+  font-family: fantasy;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: rgb(210, 72, 252);
+  margin-bottom: 1em;
+}
+
+.mui-btn-login {
+  width: 100px;
+  background-color: rgb(167, 232, 235) !important;
+  margin: 20px auto !important;
+}
+
+.mui-btn-login:focus {
+  outline: none !important;
+}
+
+.footer-tagline {
+  font-size: 16px;
+  margin-top: auto;
+  margin-left: auto;
+  padding: 0 15px;
+  font-family: cursive;
+}
+
+.signup-btn {
+  color: rgb(144, 79, 163);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.error {
+  color: red;
+}

@@ -2,14 +2,13 @@ import React, { useState } from "react";
 import { Layout, Menu } from "antd";
 import "antd/dist/antd.css";
 
-import "./components/AntDesign.css";
+import "./MenuShop.css";
 import JeansItem from "./components/JeansItem";
 import TShirts from "./components/TShirts";
 
-const { Content, Footer, Sider } = Layout;
+const { Content, Sider } = Layout;
 
 function GirlsShop() {
-  const [collapsed, setCollapsed] = useState(false);
   const [selectedMenu, setSelectedMenu] = useState("1");
 
   const componentsSwtich = (key) => {
@@ -34,30 +33,18 @@ function GirlsShop() {
   return (
     <div
       style={{
-        display: "flex",
-        width: "100vw",
+        minWidth: "1200px",
         height: "100vh",
-        marginTop: "4.5em",
       }}
     >
-      <Layout
-        className={collapsed ? "containerWidth" : "onCollapseContainerWidth"}
-      >
-        <Sider
-          style={{
-            overflow: "auto",
-            height: "100vh",
-            position: "fixed",
-            left: 0,
-          }}
-        >
+      <Layout className="sider-width">
+        <Sider className="sider-container">
           <div className="sidebarTitle">Girls Shopping</div>
           <Menu
             selectedKeys={selectedMenu}
-            theme="dark"
+            className="menu-container"
             mode="inline"
             defaultSelectedKeys={["1"]}
-            className="mt-5"
             onClick={(e) => setSelectedMenu(e.key)}
           >
             <Menu.Item
@@ -65,7 +52,7 @@ function GirlsShop() {
               icon={
                 <img src="https://img.icons8.com/color/32/000000/jeans.png" />
               }
-              className="text-warning"
+              className="menu-item"
             >
               Jeans
             </Menu.Item>
@@ -74,7 +61,7 @@ function GirlsShop() {
               icon={
                 <img src="https://img.icons8.com/plasticine/32/000000/womens-t-shirt.png" />
               }
-              className="text-warning"
+              className="menu-item"
             >
               T-Shirts
             </Menu.Item>
@@ -83,7 +70,7 @@ function GirlsShop() {
               icon={
                 <img src="https://img.icons8.com/color/32/000000/wedding-dress.png" />
               }
-              className="text-warning"
+              className="menu-item"
             >
               Gowns
             </Menu.Item>
@@ -92,7 +79,7 @@ function GirlsShop() {
               icon={
                 <img src="https://img.icons8.com/doodle/32/000000/wedding-dress--v1.png" />
               }
-              className="text-warning"
+              className="menu-item"
             >
               Frocks
             </Menu.Item>
@@ -101,7 +88,7 @@ function GirlsShop() {
               icon={
                 <img src="https://img.icons8.com/cotton/32/000000/women-shoes.png" />
               }
-              className="text-warning"
+              className="menu-item"
             >
               Scandles
             </Menu.Item>
@@ -110,20 +97,14 @@ function GirlsShop() {
               icon={
                 <img src="https://img.icons8.com/plasticine/32/000000/slippers.png" />
               }
-              className="text-warning"
+              className="menu-item"
             >
               Slippers
             </Menu.Item>
           </Menu>
         </Sider>
-        <Layout
-          className="site-layout pt-3"
-          style={{ backgroundColor: "#e3e4e6" }}
-        >
+        <Layout>
           <Content>{componentsSwtich(selectedMenu)}</Content>
-          <Footer style={{ textAlign: "center" }}>
-            a_phenomenal1 ©2021 Created by Nitesh Kumar
-          </Footer>
         </Layout>
       </Layout>
     </div>

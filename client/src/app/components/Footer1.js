@@ -2,8 +2,8 @@ import React from "react";
 
 function Footer() {
   return (
-    <div className="col-lg-12 footer">
-      <div className="iconHolder w-100">
+    <div className="footer" style={{ minWidth: "1200px" }}>
+      <div className="iconHolder">
         <div className="m-3">
           <img src="https://img.icons8.com/fluent/48/000000/instagram-new.png" />
         </div>
